@@ -281,6 +281,13 @@ extension NullableStringBasics on String? {
   /// whitespace characters as defined by [String.trim].
   bool get isNullOrBlank => this?.trim().isEmpty ?? true;
 
+  bool isNull() {
+    if (this == null)
+      return true;
+    else
+      return false;
+  }
+
   /// Returns `true` if [this] is not null, not empty, and does not consist
   /// solely of whitespace characters as defined by [String.trim].
   bool get isNotNullOrBlank => this?.trim().isNotEmpty ?? false;
